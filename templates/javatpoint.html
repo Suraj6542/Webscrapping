@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Scrap data</title>
+    <style>
+        .form {
+            align-items: center;
+        }
+
+        .button {
+            align-items: center;
+        }
+
+        .card {
+            box-shadow: 10px 10px rgb(84, 84, 84);
+            border-width: 4px 4px 4px 4px;
+            border-color: black;
+            border-radius: 0.3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="card" style="background-color: rgb(132, 96, 114); height: 90%; width: 50%; ">
+            <br><br><br><br>
+            <h1>JavatPoint Interview Questions Extractor</h1><br><br>
+            <form class="form" Align="center" method="post" action="/submit">
+                <b>URL : </b><input type="text" name="URL" /><br><br>
+                <b>Heading : </b><input type="text" name="Heading" /><br><br>
+                <input type="submit" value="Submit" />
+
+            </form>
+
+
+
+            {% if message %}
+            <h4>Your file generated succesfully</h4>
+            <a href="{{ url_for('download')}}" download="interview.docx">
+                <button>Download File</button>
+            </a>
+            {% endif %}<br><br><br><br>
+        </div>
+    </center>
+</body>
+
+</html>
